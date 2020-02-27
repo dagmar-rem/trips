@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "images/uploads"
+
+collections:
+  - name: "trips" # Jaká je cesta ke kolekci v administraci,např. /admin/collections/novinky
+    label: "Výlety" # Jak se kolekce jmenuje v UI administrace
+    folder: "trips" # Ve které složce jsou stránky/příspěvky uložené v Eleventy
+    create: true # Uživatel může přidávat nové stránky/příspěvky
+    slug: "{{slug}}" # Šablona jmen souborů, např. YYYY-MM-DD-title.md
+    fields: # Pole, která budeme editovat. Obvykle data uložená ve front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/trip.njk"}
+      - {label: "Tags", name: "tags", widget: "string", default: "trip"}
+      - {label: "Název výletu", name: "title", widget: "string"}
+      - {label: "Krátký popis", name: "description", widget: "string"}
+      - {label: "Cena", name: "cena", widget: "number"}
+      - {label: "Datum vydání", name: "date", widget: "datetime"}
+      - {label: "Obrázek", name: "cover", widget: "image", required: false }
+      - {label: "Obsah", name: "body", widget: "markdown"}
