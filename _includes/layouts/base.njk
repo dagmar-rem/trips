@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+	{#
+		naimportujeme sekci <head>, kterou mame vytvorenou
+		jako komponentu spolecnou pro cely web
+	#}
+	{% include "components/head.njk" %}
+
+	<body>
+
+		<header>
+			{#
+				soucasti kazde stranky je horni prouzek s navigaci,
+				ktery mame opet jako komponentu
+			#}
+			{% include "components/menu.njk" %}
+		</header>
+
+		<main>
+			{#
+				do sekce main budeme vkladat obsah cilove stranky
+				nebo vnorene sablony
+			#}
+			{{ content | safe}}
+		</main>
+
+		{% include "components/footer.njk" %}
+
+
+		{#
+			JavaScript pro Glide.js slider/carusel
+			pravdepodobne by nam stacil pouze na uvodni strance, ale nebudeme
+			si to tim ted komplikovat a nechame ho zde (=bude ve vsech strankach)
+		#}
+		<script src="/assets/js/glide.min.js"></script>
+		<script>
+			new Glide('.glide', {
+				type: 'carousel',
+				startAt: 0,
+				perView: 5,
+				gap: 30,
+				peek: { before: 70, after: 70 },
+				breakpoints: {
+					480: {
+						perView: 1,
+						gap: 15,
+						peek: { before: 30, after: 30 }
+					},
+					750: {
+						perView: 2,
+						gap: 20,
+						peek: { before: 45, after: 45 }
+					},
+					1000: {
+						perView: 3,
+						gap: 20,
+						peek: { before: 45, after: 45 }
+					},
+					1400: {
+						perView: 4
+					}
+				}
+			}).mount();
+		</script>
+	</body>
+
+</html>

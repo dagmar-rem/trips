@@ -1,0 +1,58 @@
+---
+title: Cestovka
+layout: layouts/home.njk
+---
+
+<section class="hero">
+	<h1>Fantastické výlety</h1>
+	<p>Svých cíle pepře pan drak ty takového k léčení těl založit pořádá centrem o myši včera talíře je ujal výkyvy spouští. Mnoho plné ven i planktonnímu narušuje.</p>
+</section>
+
+
+<section class="last-minute">
+
+	<div class="section-heading">
+		<div class="backdrop">Last minute</div>
+		<div class="subtitle">Last minute</div>
+		<h2>Vyražte se slevou na poslední chvíli</h2>
+	</div>
+
+	<div class="glide">
+		<div class="glide__track" data-glide-el="track">
+			<ul class="glide__slides">
+
+				{% for trip in collections.lastminute %}
+
+					<li class="glide__slide">
+
+						<div class="trip">
+							<img src="/images/{{ trip.data.cover }}" alt="">
+							<div class="trip-content">
+								<h3>{{ trip.data.title }}</h3>
+								<p>{{ trip.data.description }}</p>
+								<a href="{{ trip.url }}" class="button">Podrobnosti</a>
+							</div>
+						</div>
+
+					</li>
+
+				{% endfor %}
+
+			</ul>
+		</div>
+	</div>
+
+</section>
+
+
+
+
+<section class="o-nas">
+	<h2>Proč si vybrat naší CK</h2>
+
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aut voluptates ratione alias iste temporibus repudiandae inventore veritatis autem eos.</p>
+
+	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit officia accusamus libero eum, quam veniam quaerat cupiditate iure saepe doloremque ipsam nam quod unde consequatur alias nihil temporibus veritatis praesentium.</p>
+</section>
+
+

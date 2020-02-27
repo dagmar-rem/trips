@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="trip-detail">
+
+	<div class="trip-content">
+
+		<h2 class="trip-heading">
+			{{ title }}
+		</h2>
+
+		<p class="trip-description">
+			{{ description }}
+		</p>
+
+		<div class="trip-meta">
+			<p>
+				<strong>Cena:</strong> {{ cena }} Kč
+			</p>
+		</div>
+
+		{{ content | safe}}
+
+	</div>
+
+	<div class="trip-image">
+		<img src="/images/{{ cover }}" alt="">
+	</div>
+
+</section>

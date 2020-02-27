@@ -1,0 +1,191 @@
+/* Zde CSS styl */
+
+* { box-sizing: border-box; }
+
+body {
+	font-family: "Work Sans", sans-serif;
+	font-size: 18px;
+	line-height: 1.4;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2 {
+	font-weight: 900;
+	line-height: 1.1;
+}
+
+.menu {
+	background-color: #222;
+	color: #ddd;
+	text-align: center;
+	line-height: 1;
+}
+
+.menu a {
+	 color: #ddd;
+	 text-decoration: none;
+	 padding: 20px;
+	 display: inline-block;
+}
+
+.menu a:hover {
+	background-color: #111;
+	color: #efba6c;
+}
+
+
+
+
+section {
+	padding: 70px 12%;
+}
+
+.section-heading {
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.section-heading .backdrop {
+	position: absolute;
+	width: 100%;
+	top: -20%;
+	text-transform: uppercase;
+	z-index: -1;
+	font-size: 5rem;
+	line-height: 1;
+	font-weight: 900;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.05);
+}
+
+.section-heading .subtitle {
+	color: #efba6c;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.section-heading h2,
+.section-heading h3 {
+	margin: 0;
+	font-weight: 400;
+	text-align: center;
+}
+
+
+
+.hero {
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url(/images/hero.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 150px 50% 150px 12%;
+	color: #fff;
+}
+
+.hero h1 {
+	color: white;
+	margin: 0 0 0.8em 0;
+	font-size: 60px;
+	line-height: 1.1;
+	font-weight: 900;
+}
+
+.hero p {
+	font-size: 22px;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+.last-minute {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.last-minute h2 {
+	text-align: center;
+}
+
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+}
+
+.trip {
+	border: 1px solid silver;
+	background-color: white;
+	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.trip img {
+	width: 100%;
+}
+
+.trip-content {
+	padding: 20px;
+}
+
+.trip-content :first-child {
+	margin-top: 0;
+}
+
+.trip-content :last-child {
+	margin-bottom: 0;
+}
+
+.button {
+	display: inline-block;
+	background-color: #28f;
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	font-size: 85%;
+}
+
+.o-nas {
+	background-color: #e5e5e5;
+}
+
+.footer {
+	background-color: black;
+	color: white;
+	padding: 20px;
+	font-size: 16px;
+	text-align: center;
+}
+
+
+.trip-detail {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+
+.trip-image img {
+	width: 100%;
+}
+
+.trip-heading {
+	font-size: 48px;
+	margin-top: 0;
+}
+
+.trip-description {
+	font-size: 22px;
+	color: #666;
+}
+
+.trip-meta {
+	margin: 30px 0;
+	padding: 10px;
+	background-color: #e5e5e5;
+	border-radius: 10px;
+}
